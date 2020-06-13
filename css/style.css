@@ -22,30 +22,38 @@ body {
   background: #9ea894;
   top: 0;
   position: sticky;
-  z-index: 2;
-  align-items: center;
-  text-align: center;
+  /* z-index: 2; */
+  /* height: 80px; */
+  
+  align-items: center !important;
+  text-align: center !important;
+  justify-content: center !important;
 }
 
 #nav-container .navbar {
   display: grid;
   grid-template-columns: auto auto;
-  /* padding: 1rem; */
-  
+  align-items: center;
+  text-align: center;
   justify-content: space-between;
-  
+  margin: 0.5rem 0.8rem;
 }
 
 #nav-container .logo {
   width: 180px;
+  margin-top: 3px;
+  justify-self: start;
 }
 
 #nav-container ul {
 display: grid;
-grid-template-columns: auto auto auto;
+grid-template-columns: repeat(3, 1fr);
 padding: 1rem;
+/* margin-top: 10px; */
 grid-gap: 1rem;
 list-style: none;
+justify-self: center;
+text-align: center;
 }
 
 #nav-container ul li {
@@ -53,10 +61,17 @@ list-style: none;
   padding: 0.5rem 0.5rem;
   border: none;
   border-radius: 5px;
+
 }
 #nav-container ul li a {
   color: #fff;
   text-decoration: none;
+}
+#nav-container ul li:hover
+
+{
+  opacity: 0.6;
+  
 }
 
 /* Header */
@@ -67,6 +82,7 @@ list-style: none;
 
 #tittle h1 {
   font-size: 2rem;
+  margin-top: 1.5rem;
 }
 
 #tittle h4 {
@@ -128,6 +144,54 @@ footer {
   text-align: center;
 }
 
+.container .btn {
+  background: #f4f4f4;
+  border: none;
+}
+.container .btn:hover  {
+  background: #333;
+  color: #fff;
+  border: #f4f4f4 1px dotted;
+}
+
+@media(max-width:600px) {
+  #nav-container {
+    opacity: 0.8;
+  }
+  #nav-container .navbar {
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #nav-container .logo {
+    width: 150px;
+    margin-top: 30px;
+  }
+
+  #nav-container ul {
+    margin: 0.1rem 0.1rem;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    grid-gap: 0.2rem;
+  }
+
+
+  /* #tittle h1 {
+    font-size: 1.2rem;
+  }
+  #tittle h4 {
+    font-size: 1rem;
+  }
+ #timeline .timeline {
+   width: 300px;
+ } */
+
+}
 
 
 
